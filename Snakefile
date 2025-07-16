@@ -12,7 +12,7 @@ rule upload_ot_diff_export:
     input:
         ot_diff_export_dump=config['dump_json']
     output:
-        done=touch("$ATLAS_PROD/OpenTargets_dumps/upload_ot_diff_export.done")
+        done=os.path.join(os.environ["ATLAS_PROD"], "OpenTargets_dumps", "upload_ot_diff_export.done")
     shell:
         """
         set -e # snakemake on the cluster doesn't stop on error when --keep-going is set
