@@ -1,6 +1,6 @@
 rule all:
     input:
-        required_outputs=""$ATLAS_PROD/OpenTargets_dumps/upload_ot_diff_export.done"
+        required_outputs="$ATLAS_PROD/OpenTargets_dumps/upload_ot_diff_export.done"
 
 rule upload_ot_diff_export:
     log: "$ATLAS_PROD/OpenTargets_dumps/upload_ot_diff_export.log"
